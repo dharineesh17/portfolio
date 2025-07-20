@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the portfolio of Dharineesh K S — a passionate web developer and digital creator. Showcasing projects in web apps, design, games, and more.">
+    <meta name="keywords" content="Web Developer, Frontend Developer, Full Stack Developer, Portfolio, JavaScript, HTML, CSS, React, Web Apps, Personal Projects, AI Tools, Freelance Developer, Responsive Design, UI UX, Dharineesh, dharineesh17, tester, ai, python, automation testing">
+    <meta property="og:title" content="Dharineesh | Portfolio">
+    <meta property="og:description" content="Explore projects and creations by Dharineesh — Web apps, games, and creative coding apps.">
+    <meta property="og:image" content="https://yourdomain.com/preview-image.jpg">
+    <meta property="og:url" content="https://dharineesh17.github.io/portfolio/">
+    <meta property="og:type" content="website">
+
+    <title>Dharineesh's Portfolio</title>
+    <link rel="shortcut icon" href="https://placehold.co/128x128.png/FFFFFF/000000?text=D&font=oswald" type="image/png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN (for general icons) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./splashScreen.css">
+    <link rel="stylesheet" href="./scrollBar.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="https://placehold.co/128x128/FFFFFF/000000?text=D&font=oswald" alt="Profile Photo" class="profile-photo">
+            <h1>Welcome to My Portfolio!</h1>
+            <p>Showcasing my work, passion, and creativity...</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+    <!-- Gradient Blurs -->
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-lg py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center rounded-b-xl transition-all duration-500 transform -translate-y-full opacity-0">
+        <div class="flex justify-between items-center w-full md:w-auto">
+            <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-600">
+                <a href="#">Dharineesh's Portfolio</a>
+            </h1>
+            <button id="hamburger-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                    <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <nav id="nav-menu">
+            <ul class="flex flex-col md:flex-row justify-center gap-x-6 gap-y-2 text-lg">
+                <li><a href="#about" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">About</a></li>
+                <li><a href="#products" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">Products</a></li>
+                <li><a href="#games" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">Games</a></li>
+                <li><a href="#app-challenges" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">App Challenges</a></li>
+                <li><a href="#websites" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">Websites</a></li>
+                <!-- <li><a href="#graphic-designs" class="relative text-gray-300 hover:text-white transition-colors duration-300 font-bold header-link">Graphic Designs</a></li>
+                <li><a href="#skill-diary" class="relative text-gray-300 hover:text-white transition-colors duration-300 font-bold header-link">Skill Diary</a></li> -->
+                <li><a href="#contacts" class="relative text-gray-300 hover:text-purple-600 transition-colors duration-300 font-bold header-link">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex flex-col justify-center items-center py-20 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                About Me
+            </h2>
+            <div class="max-w-4xl text-center text-lg md:text-xl leading-relaxed text-gray-200 animate-on-scroll">
+                <!-- <p class="mb-4">
+                    Hello! I'm <span class="font-bold text-purple-400">Your Name</span>, a passionate web developer with a knack for creating engaging and highly interactive digital experiences. I thrive on bringing ideas to life through clean code and innovative design.
+                </p> -->
+                <p class="mb-4 text-justify">
+                    Hi, I'm <span class="font-bold text-purple-500">Dharineesh</span> — a passionate tech enthusiast driven by curiosity and creativity. I specialize in developing responsive, user-centric web applications and have a interest in technology. I love turning ideas into impactful digital experiences that solve real-world problems. I believe in continuous growth and enjoy exploring new tools, building meaningful projects, and taking on new challenges. <strong>Always curious, always learning.</strong> Whether you're here to collaborate, hire, or explore my work — I’m excited to connect and create something valuable together.</p>
+                <p class="mb-4">
+                    <em>Stay Curious. Keep Exploring. Never Stop Learning.</em>
+                </p>
+                    <!-- <p class="mb-4">
+                    My journey in web development is driven by a curiosity for new technologies and a desire to build applications that are not only functional but also delightful to use. I specialize in front-end development, focusing on responsive layouts, smooth animations, and intuitive user interfaces.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or experimenting with 3D graphics. Let's build something amazing together!
+                </p> -->
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Products
+            </h2>
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                <!-- Product cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Games
+            </h2>
+            <div id="games-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                <!-- Games cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- App Challenges Section -->
+        <section id="app-challenges" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                App Challenges
+            </h2>
+            <div id="app-challenges-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                <!-- App Challenge cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Websites Section -->
+        <section id="websites" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Websites I've Built
+            </h2>
+            <div id="websites-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                <!-- Website cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Graphic Designs Section -->
+        <!-- <section id="graphic-designs" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Graphic Designs
+            </h2>
+            <div id="graphic-designs-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                
+            </div>
+        </section> -->
+
+        <!-- Skill Diary Section -->
+        <!-- <section id="skill-diary" class="min-h-screen flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Skill Diary
+            </h2>
+            <div id="skill-diary-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
+                
+            </div>
+        </section> -->
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="flex flex-col justify-center items-center py-10 px-4 md:px-8 relative z-10">
+            <h2 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-5 pb-5 text-center animate-on-scroll">
+                Get in Touch
+            </h2>
+            <div class="max-w-2xl w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center border border-gray-700 animate-on-scroll">
+                <p class="text-lg md:text-xl text-gray-200 mb-6">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <a href="https://forms.gle/MeSFgkJbRJHvFsLV8" target="_blank" class="inline-flex items-center bg-gradient-to-r from-green-500 to-teal-600 text-white py-3 px-8 rounded-full font-semibold text-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail mr-3"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Contact Me
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-5 px-6 md:px-12 text-center border-t border-gray-800 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
+            <!-- <a href="#" download="Your_Name_Resume.pdf" class="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 px-8 rounded-full font-semibold text-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg mb-6 md:mb-0 animate-on-scroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text inline-block mr-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                view Resume
+            </a> -->
+            <a target="_blank" href="https://dharineesh17.github.io/resume/" class="bg-gradient-to-r from-orange-500 to-red-600 text-white py-3 px-8 rounded-full font-semibold text-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg mb-6 md:mb-0 animate-on-scroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text inline-block mr-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                view Resume
+            </a>
+
+            <div class="flex space-x-6 mb-6 md:mb-0">
+                <a target="_blank" href="https://github.com/dharineesh17" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.5 0 4.1-1.4 4.1-3.5 0-.9-.3-1.7-.8-2.4 1.1-.7 1.8-2.6 0-4-1.1-2.6-4-1-4-1s-2.9-1.6-4-1c-1.8 0-3.5 1.7-4 4 0 1.9.7 3.8 1.8 4.5-.5.6-.8 1.4-.8 2.4 0 2.1.6 3.5 4.1 3.5a4.8 4.8 0 0 0-1 3.2v4"/></svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="24" height="24">
+                        <path fill="white" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/>
+                    </svg>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                <a target="_blank" href="https://linkedin.com/in/dharineesh17/" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24">
+                        <path fill="white" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                    </svg>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a target="_blank" href="https://www.hackerrank.com/profile/dharineesh17" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> -->
+                    <svg fill="#ffffff" width="24" height="24" viewBox="-1.68 -1.68 27.36 27.36" role="img" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>HackerRank icon</title><path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.11 6.43c-.072.045-.12.126-.12.218 0 .143.113.258.255.258h.704l.008 10.035c0 .145.111.258.254.258h1.492c.142 0 .259-.115.259-.256v-4.004h4.073v4.152h-.699c-.143 0-.256.115-.256.258 0 .092.048.174.119.219l1.579 1.51c.044.061.141.109.225.109.085 0 .159-.045.208-.109l1.679-1.51c.072-.045.12-.127.12-.219 0-.143-.115-.258-.255-.258h-.704l-.007-10.034c0-.145-.114-.26-.255-.26h-1.494v.002z"></path></g></svg>
+                    
+                    <span class="sr-only">HackerRank</span>
+                </a>
+
+                <a target="_blank" href="https://dharineesh17.blogspot.com/" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> -->
+                    <svg fill="#ffffff" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M301.4,286.7h-91.1c-8.6,0-15.5,6.9-15.5,15.4c0,8.4,6.9,15.4,15.5,15.4h91.1c8.5,0,15.4-7,15.4-15.4 C316.8,293.6,309.9,286.7,301.4,286.7z"></path> <path d="M210.3,225h44.8c8.6,0,15.5-7,15.5-15.5s-6.9-15.4-15.5-15.4h-44.8c-8.6,0-15.5,6.9-15.5,15.4S201.8,225,210.3,225z"></path> <path d="M472,0H40C17.9,0,0,17.9,0,40v432c0,22.1,17.9,40,40,40h432c22.1,0,40-17.9,40-40V40C512,17.9,494.1,0,472,0z M383,303.3 c-0.3,44.4-36.4,80.7-80.8,80.7h-92.9c-44.5,0-80.8-36.4-80.8-80.7v-94.4c0-44.5,36.4-80.9,80.8-80.9h56.6 c20.9,2.5,51.2,20.4,62.4,44.1c3.1,6.7,4.7,7.7,7.3,27.5c1.4,10.2,2,17.7,6.6,21.9c6.5,5.8,30.2,1.9,34.9,5.6l3.6,2.8l2.1,4.4 l0.8,3.6L383,303.3z"></path> </g> </g></svg>
+                    <span class="sr-only">Blogs</span>
+                </a>
+                <a target="_blank" href="https://www.shutterstock.com/g/dharineesh17" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> -->
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" width="24" height="24">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M12 17C12 17.5523 12.4477 18 13 18H17C17.5523 18 18 17.5523 18 17V13C18 12.4477 17.5523 12 17 12H16V16H12V17Z" fill="#ffffff"></path>
+                            <path d="M11 6C11.5523 6 12 6.44772 12 7V8H8V12H7C6.44772 12 6 11.5523 6 11V7C6 6.44772 6.44772 6 7 6H11Z" fill="#ffffff"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V5C22 3.34315 20.6569 2 19 2H5ZM19 4H5C4.44771 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44771 19.5523 4 19 4Z" fill="#ffffff"></path>
+                        </g>
+                    </svg>
+                    <span class="sr-only">Shutterstock</span>
+                </a>
+                <a target="_blank" href="https://in.pinterest.com/dharineesh17/" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> -->
+                    <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" width="24" height="24">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>pinterest [#180]</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs> </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -7399.000000)" fill="#ffffff">
+                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                        <path d="M173.876,7239 C168.399,7239 164,7243.43481 164,7248.95866 C164,7253.05869 166.407,7256.48916 169.893,7258.07936 C169.893,7256.21186 169.88,7256.45286 171.303,7250.38046 C170.521,7248.80236 171.129,7246.19673 172.88,7246.19673 C175.31,7246.19673 173.659,7249.79964 173.378,7251.2174 C173.129,7252.30544 173.959,7253.14238 174.955,7253.14238 C176.864,7253.14238 178.108,7250.71524 178.108,7247.87063 C178.108,7245.69456 176.615,7244.10437 174.042,7244.10437 C169.467,7244.10437 168.307,7249.19966 169.893,7250.79893 C170.292,7251.40294 169.893,7251.43118 169.893,7252.22174 C169.616,7253.05768 167.403,7251.84259 167.403,7248.70757 C167.403,7245.86195 169.727,7242.51518 174.457,7242.51518 C178.191,7242.51518 180.681,7245.27609 180.681,7248.2054 C180.681,7252.13805 178.523,7254.98366 175.37,7254.98366 C174.291,7254.98366 173.295,7254.3978 172.963,7253.72824 C172.36,7256.07371 172.238,7257.26258 171.303,7258.58153 C172.216,7258.83261 173.129,7259 174.125,7259 C179.602,7259 184,7254.56519 184,7249.04235 C183.752,7243.43481 179.353,7239 173.876,7239" id="pinterest-[#180]"> </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="sr-only">Pinterest</span>
+                </a>
+                <!-- <a target="_blank" href="https://twitter.com/dharineesh17" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300 animate-on-scroll">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17-17 12.9A10.3 10.3 0 0 1 2 20c1.5 0 2.8-.4 4-1.2A4.8 4.8 0 0 0 8 16c.6 0 1.1.1 1.6.3A3.6 3.6 0 0 1 12 12c.5 0 1-.1 1.4-.3A3.6 3.6 0 0 1 16 8c.6 0 1.1.1 1.6.3A3.6 3.6 0 0 1 20 4z"/></svg>
+                    <span class="sr-only">Twitter</span>
+                </a> -->
+            </div>
+
+            <p class="text-gray-400 text-sm animate-on-scroll">
+                &copy; <span id="current-year"></span> Dharineesh K S. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Particle.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="./splashScreen.js"></script>
+    <script src="./disable.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Custom CSS for animations and general styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* Dark theme background */
+    color: #e2e8f0; /* Light text color */
+    overflow-x: hidden; /* Prevent horizontal scroll due to blur effects */
+}
+/* Keyframes for blob animation */
+@keyframes blob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+.animate-blob {
+    animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.4, 1);
+}
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+/* Hide elements initially for JS animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.card-animate {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+}
+.card-animate.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+.card-animate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border-color: #a78bfa; /* purple-500 */
+}
+/* Particle.js container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+/* Ensure header doesn't cause content overlap */
+body {
+    padding-top: 2rem; /* Adjust based on header height */
+}
+@media (min-width: 768px) {
+    body {
+        padding-top: 2rem; /* Adjust for larger screens */
+    }
+}
+/* Hamburger menu specific styles */
+#nav-menu {
+    display: none; /* Hidden by default on small screens */
+    flex-direction: column;
+    width: 100%;
+    background-color: #1a202c; /* Same as header background */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#nav-menu.is-open {
+    display: flex;
+}
+@media (min-width: 768px) {
+    #nav-menu {
+        display: flex; /* Always visible on large screens */
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+    #hamburger-button {
+        display: none; /* Hide hamburger on large screens */
+    }
+}
+#nav-menu li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    #nav-menu li {
+        margin-bottom: 0;
+    }
+}
+/* Button styling for footer links */
+/* .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg;
+    @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700;
+    white-space: nowrap; /* Prevent text wrapping 
+} */
+/* .btn svg {
+    @apply mr-2;
+    width: 24px; /* Standard icon size 
+    height: 24px;
+}
+.btn-li {
+    @apply bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950;
+}
+.btn-hr {
+    @apply bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700;
+}
+.btn-bl {
+    @apply bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700;
+} */
