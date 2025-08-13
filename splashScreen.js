@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // Matches CSS transition duration
     };
     // Hide after a set time (e.g., 3 seconds)
-    setTimeout(hideSplashScreen, 1000); // Adjust duration as needed
+    setTimeout(hideSplashScreen, 2000); // Adjust duration as needed
 });

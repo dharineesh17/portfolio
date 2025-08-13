@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photo Capture Web App – Demo Website</title>
+    <!-- <meta property="og:image" content="https://placehold.co/600x400/111827/FFFFFF/png?text=Dharineesh%20Portfolio"> -->
+    <meta property="og:image" content="./assets/meta/demoCard.png">
+    <meta property="og:url" content="https://dharineesh17.github.io/portfolio/PCSDemo.html">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="./assets/meta/logo.svg" type="image/svg" style="border-radius: 50%;">
+
+    <style>
+      :root {
+        --bg: #0b1020;
+        --card: #111731;
+        --text: #e9eefc;
+        --muted: #b6c1e1;
+        --accent: #af0fe9;
+        --accent-2: #cb7cff;
+        --ring: rgba(122, 170, 255, 0.35);
+        --shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+        background: radial-gradient(rgba(181, 6, 250, 0.15), transparent),
+        /*radial-gradient(1200px 800px at 20% -10%, rgba(122,170,255,.12), transparent),*/
+                    /*radial-gradient(1000px 600px at 120% 20%, rgba(124,240,255,.10), transparent),*/
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px 80px; }
+
+      /* Hero */
+      .hero { display: grid; gap: 24px; align-items: center; grid-template-columns: 1.1fr .9fr; }
+      .badge { display:inline-flex; gap:8px; align-items:center; padding-top:10px; border-radius:40px; /*background: rgba(106,166,255,.12);*/ color: var(--accent); font-weight: 700; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; }
+      h1 { margin: 8px 0 10px; font-size: clamp(28px, 6vw, 44px); line-height: 1.1;}
+      .lead { color: var(--muted); font-size: 18px; }
+
+      .card { /*background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border: 1px solid rgba(255,255,255,.08);*/ border-radius: 20px; box-shadow: var(--shadow);
+        backdrop-filter: blur(8px); }
+
+      .hero-media { padding: 14px; }
+      .screenshot {
+        width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid rgba(255,255,255,.08);
+        /*background: #0e1430;*/ aspect-ratio: 16/9; object-fit: cover;
+      }
+
+      /* Features */
+      .section { margin-top: 56px; }
+      h2 { font-size: clamp(22px, 5vw, 30px); margin: 0 0 8px; }
+      .sub { color: var(--muted); margin: 0 0 22px; }
+
+      .features { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+      .feature { padding: 18px 18px; border-radius: 16px; border: 1px solid rgba(255,255,255,.08); /*background: rgba(17,23,49,.6);*/ }
+      .feature strong { color: var(--accent-2); }
+
+      /* Video */
+      .video { padding: 16px; }
+      .video-player, .video-fallback {
+        width: 100%; aspect-ratio: 16/9; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); /*background:#0e1430*/;
+      }
+
+      /* Disclaimer */
+      .disclaimer { display:flex; gap:14px; align-items:flex-start; padding: 16px 18px; border-radius: 16px; border: 1px dashed rgba(124,240,255,.55); /*background: rgba(124,240,255,.08);*/ color: #dffcff; }
+
+      /* Footer */
+      footer { margin-top: 56px; color: var(--muted); font-size: 14px; text-align: center; }
+
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; }
+        .features { grid-template-columns: 1fr; }
+      }
+
+      /* Tiny utility */
+      .pill { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.1); color: var(--muted); font-size: 12px; }
+      .row { display:flex; gap:10px; flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Demo Website</span>
+        <h1>Photo Capture Web App</h1>
+        <p class="lead" style="text-align: justify;">This demo website showcases the core workflow of a custom-built Photo Capture Web App originally developed for documenting voter participation during an election day. The live app was used in a closed, offline environment for security reasons, and handled over <strong>1000+ photo captures</strong> in a single day.</p>
+        <div class="row" aria-label="tech stack">
+          <span class="pill">HTML5</span>
+          <span class="pill">CSS3</span>
+          <span class="pill">Tailwind-style UI</span>
+          <span class="pill">JavaScript (WebRTC)</span>
+          <span class="pill">PHP</span>
+          <span class="pill">CSV / JSON</span>
+          <span class="pill">XAMPP</span>
+        </div>
+      </div>
+      <div class="card hero-media">
+        <!-- Replace src with your screenshot path -->
+        <img class="screenshot" src="./assets/products/photoCapturingApp.png" alt="Demo screenshot of the Photo Capture Web App showing fetch details, webcam preview, and controls" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 style="text-align: center;">Key Features</h2>
+      <!-- <p class="sub">What the production, offline-only application provides.</p> -->
+      <div class="features">
+        <div class="feature"><strong>Fetch Details from Data:</strong> Retrieves participant details before capture.</div>
+        <div class="feature"><strong>Webcam Access with Live Preview:</strong> Uses WebRTC for real-time camera feed.</div>
+        <div class="feature"><strong>Smart Auto-Naming:</strong> Saves photos as <i>serialnumber_name.jpg</i> for easy organization.</div>
+        <div class="feature"><strong>Duplicate Capture Warning:</strong> Alerts if an entry is already captured.</div>
+        <div class="feature"><strong>Timestamp Logging:</strong> Stores capture time along with metadata in CSV and JSON files.</div>
+        <div class="feature"><strong>Live Progress Tracking:</strong> Analytics page shows percentage completed from total expected entries.</div>
+        <!-- <div class="feature"><strong>Image Verification</strong> – Real-time image preview page for quick accuracy checks.</div> -->
+      </div>
+    </section>
+
+    <section class="section card video">
+      <h2 style="text-align: center;">Demo Video</h2>
+      <p class="sub" style="text-align: center;">This video uses only mock data and a simulated flow for demonstration.</p>
+      <!-- If you have a local demo.mp4, place it in ./assets/demo.mp4 -->
+      <video class="video-player" muted controls poster="./assets/products/photoCapturingApp.png">
+        <source src="./assets/products/photoCapturingAppDemo.mp4" type="video/mp4" />
+        <div class="video-fallback"></div>
+      </video>
+    </section>
+
+    <section class="section disclaimer">
+      <div>⚠️</div>
+      <div>
+        <strong>Disclaimer</strong>
+        <div>Due to privacy and security concerns, the actual working web application and real captured images cannot be hosted online. This website contains only demo videos and screenshots to illustrate the app's features.</div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Dharineesh K S | Photo Capture Web App - Demo. Built for portfolio presentation.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
