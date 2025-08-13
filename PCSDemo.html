@@ -40,6 +40,9 @@
       .badge { display:inline-flex; gap:8px; align-items:center; padding-top:10px; border-radius:40px; /*background: rgba(106,166,255,.12);*/ color: var(--accent); font-weight: 700; font-size: 15px; letter-spacing: .04em; text-transform: uppercase; }
       h1 { margin: 8px 0 10px; font-size: clamp(28px, 6vw, 44px); line-height: 1.1;}
       .lead { color: var(--muted); font-size: 18px; }
+      .lead strong {
+        color: var(--accent);
+      }
 
       .card { /*background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border: 1px solid rgba(255,255,255,.08);*/ border-radius: 20px; box-shadow: var(--shadow);
         backdrop-filter: blur(8px); }
@@ -87,7 +90,7 @@
       <div>
         <span class="badge">Demo Website</span>
         <h1>Photo Capture Web App</h1>
-        <p class="lead" style="text-align: justify;">This demo website showcases the core workflow of a custom-built Photo Capture Web App originally developed for documenting voter participation during an election day. The live app was used in a closed, offline environment for security reasons, and handled over <strong>1000+ photo captures</strong> in a single day.</p>
+        <p class="lead" style="text-align: justify;">This demo website showcases the core workflow of a custom-built Photo Capture Web App originally developed for documenting voter participation during an election day. The live app was used in offline environment (localhost server), and successfully handled over <strong>1000+ photo captures</strong> in a single day at an <strong> average of 34.79 seconds per capture </strong>, ensuring high accuracy and throughput.</p>
         <div class="row" aria-label="tech stack">
           <span class="pill">HTML5</span>
           <span class="pill">CSS3</span>
@@ -145,5 +148,6 @@
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="./disable.js"></script>
 </body>
 </html>
