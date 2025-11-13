@@ -65,7 +65,7 @@ function createSectionCard(item) {
     const card = document.createElement('div');
     card.className = 'bg-gray-800 rounded-xl shadow-2xl p-6 flex flex-col items-center text-justify max-w-sm w-full border border-gray-700 card-animate';
     card.innerHTML = `
-        ${item.image ? `<img src="${item.image}" alt="${item.title}" class="w-full h-40 object-cover rounded-lg mb-4 border border-gray-600" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1a202c/e2e8f0?text=${item.title.replace(/\s/g, '+')}';" />` : `<img src="${item.image1}" alt="${item.title}" class="w-full h-100 object-cover rounded-lg mb-4 border border-gray-600" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1a202c/e2e8f0?text=${item.title.replace(/\s/g, '+')}';" />`}
+        ${item.image ? `<img src="${item.image}" alt="${item.title}" class="w-full  object-cover rounded-lg mb-4 border border-gray-600" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1a202c/e2e8f0?text=${item.title.replace(/\s/g, '+')}';" />` : `<img src="${item.image1}" alt="${item.title}" class="w-full h-100 object-cover rounded-lg mb-4 border border-gray-600" onerror="this.onerror=null;this.src='https://placehold.co/400x250/1a202c/e2e8f0?text=${item.title.replace(/\s/g, '+')}';" />`}
         
         <h3 class="text-2xl font-semibold text-white mb-2">${item.title}</h3>
         ${item.challenge ? `<p class="text-gray-300 text-sm mb-4 flex-grow">${item.challenge}</p>` : ''}
